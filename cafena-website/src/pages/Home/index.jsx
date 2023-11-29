@@ -1,9 +1,10 @@
 import React from 'react'
+import HeroArea from '../../components/HomePageComponents/HeroArea'
 
 const Home = () => {
   return (
     <main>
-        home
+        <HeroArea/>
     </main>
   )
 }
