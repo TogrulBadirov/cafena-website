@@ -1,0 +1,80 @@
+#navbar {
+  background-color: red;
+    height: 72px;
+  .nav_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 72px;
+
+    .nav_left {
+      display: flex;
+    }
+    .nav_right {
+      display: flex;
+
+      .nav_item_icon {
+        font-size: 1.3rem;
+      }
+      .basket_icon {
+        position: relative;
+        .basket_counter {
+          background-color: #80a093;
+          border-radius: 50%;
+          width: 20px;
+          height: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          top: -3px;
+          left: 41px;
+          width: 20px;
+          font-size: 12px;
+          color: #ffffff;
+        }
+      }
+    }
+
+    .nav_item {
+      padding: 0 20px;
+      cursor: pointer;
+      position: relative;
+      height: 100%;
+      &:hover {
+        color: var(--main-color);
+        transition: all 0.4s ease;
+
+        & >a::after {
+          opacity: 1;
+          left: -20px;
+          transition: all 0.4s ease;
+        }
+      }
+
+      &>a::after {
+        position: absolute;
+        left: -5px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 11px;
+        height: 11px;
+        background: var(--main-color);
+        content: "";
+        border-radius: 50%;
+        opacity: 0;
+        transition: all 0.4s ease;
+      }
+      &>a {
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        font-weight: 600;
+        display: block;
+        height: 100%;
+        // line-height: 80px;
+        position: relative;
+        padding: 0 10px;
+      }
+    }
+  }
+}
