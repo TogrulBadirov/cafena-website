@@ -1,0 +1,33 @@
+#special_menu {
+  text-align: center;
+  background-color: #f4f1ee;
+  padding: 50px 0;
+  .special_menu_content {
+    .menu_buttons {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 960px;
+      margin: 30px auto;
+      border: 1px solid #E2DFDD;
+      border-radius: 5px;
+      button {
+        border: none;
+        height: 100%;
+        font-size: 15px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #6c6c6c;
+        border-radius: 5px;
+        padding: 8px 32px;
+        display: block;
+        background-color: transparent;
+        &:hover{
+            background-color: var(--main-color);
+            color: #fff;
+            transition: all .4s ease;
+        }
+      }
+    }
+  }
+}

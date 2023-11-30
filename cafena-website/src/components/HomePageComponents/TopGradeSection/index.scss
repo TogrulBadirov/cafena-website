@@ -1,0 +1,35 @@
+#top_grade_section {
+  background-color: #f4f1ee;
+  text-align: center;
+  position: relative;
+  .bg_images_1 {
+    left: 0;
+  }
+  .bg_images_2 {
+    right: 0;
+  }
+
+  .bg_img {
+    position: absolute;
+    top: 39px;
+    z-index: 1;
+  }
+
+  @media screen and (max-width: 992px) {
+    .bg_img {
+      img {
+        max-width: 300px;
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .bg_img {
+      img {
+        max-width: 200px;
+      }
+    }
+    .bg_images_2 {
+      display: none;
+    }
+  }
+}

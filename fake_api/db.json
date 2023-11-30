@@ -8,8 +8,25 @@
   "category": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "categoryName":"chocolate"
+    },
+    {
+      "id": 2,
+      "categoryName":"coffee"
+    },
+    {
+      "id": 1,
+      "categoryName":"sandwiches"
+    }, {
+      "id": 1,
+      "categoryName":"sweets"
+    }, {
+      "id": 1,
+      "categoryName":"Black tea"
+    }
+    , {
+      "id": 1,
+      "categoryName":"Grean Tea"
     }
   ],
   "blog": {

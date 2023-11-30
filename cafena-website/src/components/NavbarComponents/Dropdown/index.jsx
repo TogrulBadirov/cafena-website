@@ -6,16 +6,16 @@ const Dropdown = ({className}) => {
     <div id='dropdown' className={className}>
       <ul>
         <li className='dropdown_items'>
-            <NavLink>shop</NavLink>
+            <NavLink to={"/shop"}>shop</NavLink>
         </li>
         <li className='dropdown_items'>
-            <NavLink>shop detail</NavLink>
+            <NavLink to={"/shopDetail"}>shop detail</NavLink>
         </li>
         <li className='dropdown_items'>
-            <NavLink>shop cart</NavLink>
+            <NavLink to={"/shopCart"}>shop cart</NavLink>
         </li>
         <li className='dropdown_items'>
-            <NavLink>shop checkout</NavLink>
+            <NavLink to={"/shopCheckout"}>shop checkout</NavLink>
         </li>
       </ul>
     </div>
