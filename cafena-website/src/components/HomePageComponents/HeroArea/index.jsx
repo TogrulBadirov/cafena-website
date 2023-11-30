@@ -1,35 +1,25 @@
 import React, { useState } from "react";
 import "./index.scss";
 import { FaPlay } from "react-icons/fa";
+import ModalVideo from "./ModalVideo";
 
 const HeroArea = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <section id="hero-area">
-      <div
-        className={isModalOpen ? "active video-modal" : "video-modal"}
-        onClick={() => setIsModalOpen(false)}
-      >
-        <button className="close-button">x</button>
-        {isModalOpen ? (
-          <iframe
-            id="cartoonVideo"
-            name="iframe_a"
-            width="800"
-            height="450"
-            allowfullscreen
-            src="//www.youtube.com/embed/4xe72U7mXNg?rel=0&amp;controls=1&amp;showinfo=0"
-          ></iframe>
-        ) : (
-          ""
-        )}
+      <ModalVideo props={{ isModalOpen, setIsModalOpen }} />
+      <div className="background-img-left">
+        <img
+          src="https://xpressrow.com/html/cafena/cafena/assets/images/shape/hero-shape-2-1.png"
+          alt=""
+        />
       </div>
-        <div className="background-img-left">
-            <img src="https://xpressrow.com/html/cafena/cafena/assets/images/shape/hero-shape-2-1.png" alt="" />
-        </div>
-        <div className="background-img-right">
-            <img src="https://xpressrow.com/html/cafena/cafena/assets/images/shape/hero-shape-2-2.png" alt="" />
-        </div>
+      <div className="background-img-right">
+        <img
+          src="https://xpressrow.com/html/cafena/cafena/assets/images/shape/hero-shape-2-2.png"
+          alt=""
+        />
+      </div>
       <div className="container">
         <div className="contents">
           <div className="hero-content-container">
@@ -59,19 +49,15 @@ const HeroArea = () => {
               src="https://xpressrow.com/html/cafena/cafena/assets/images/hero/hero-img-2-1.png"
               alt="coffee"
             />
-              {/* <a
-              href="//www.youtube.com/embed/4xe72U7mXNg?rel=0&amp;controls=0&amp;showinfo=0"
-              frameborder="0"
-              target="iframe_a"
-            >
-              Play
-            </a> */}
-                <div className="play-button-container">
-                <button onClick={() => setIsModalOpen(!isModalOpen)} className="play-button">
+            <div className="play-button-container">
+              <button
+                onClick={() => setIsModalOpen(!isModalOpen)}
+                className="play-button"
+              >
                 <FaPlay />
-                </button>
-                <p>Play Video</p>
-                </div>
+              </button>
+              <p>Play Video</p>
+            </div>
           </div>
         </div>
       </div>
