@@ -9,6 +9,7 @@ import About from './pages/About';
 import Menu from './pages/Menu';
 import Shop from './pages/Shop';
 import Contact from './pages/Contact';
+import ShopCart from './pages/ShopCart';
 
 function App() {
 
@@ -24,8 +25,8 @@ function App() {
           <Route path="/blog" element={<Blog/>} />
           <Route path="/shop" element={<Shop/>} />
           <Route path="/contact" element={<Contact/>} />
+          <Route path="/shopCart" element={<ShopCart/>} />
           
-          {/* <Route path="contact" element={<Contact />} /> */}
           {/* <Route path="*" element={<NoPage />} /> */}
         </Route>
       </Routes>

@@ -31,27 +31,31 @@ const TopGradeSection = () => {
               num="01"
               title="Americano Grade"
               info=" Curabitur semper erat a lacusey consequat, sit amet quam"
+              className="bottom_space"
             />
 
             <TopGradeProduct
-              img="https://xpressrow.com/html/cafena/cafena/assets/images/top-grade/tg-2-1.jpeg"
-              num="01"
-              title="Americano Grade"
+              img="https://xpressrow.com/html/cafena/cafena/assets/images/top-grade/tg-2-2.jpeg"
+              num="02"
+              title="arebica Green"
               info=" Curabitur semper erat a lacusey consequat, sit amet quam"
+              className="top_spage"
             />
 
             <TopGradeProduct
-              img="https://xpressrow.com/html/cafena/cafena/assets/images/top-grade/tg-2-1.jpeg"
-              num="01"
-              title="Americano Grade"
+              img="https://xpressrow.com/html/cafena/cafena/assets/images/top-grade/tg-2-3.jpeg"
+              num="03"
+              title="Mixed Rosted"
               info=" Curabitur semper erat a lacusey consequat, sit amet quam"
+              className="bottom_space"
             />
 
             <TopGradeProduct
-              img="https://xpressrow.com/html/cafena/cafena/assets/images/top-grade/tg-2-1.jpeg"
-              num="01"
-              title="Americano Grade"
+              img="https://xpressrow.com/html/cafena/cafena/assets/images/top-grade/tg-2-4.jpeg"
+              num="04"
+              title="Robasta Rosted"
               info=" Curabitur semper erat a lacusey consequat, sit amet quam"
+              className="top_spage"
             />
           </div>
         </div>
