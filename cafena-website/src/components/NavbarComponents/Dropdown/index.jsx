@@ -1,9 +1,9 @@
 import React from 'react'
 import { NavLink } from "react-router-dom";
 import './index.scss'
-const Dropdown = () => {
+const Dropdown = ({className}) => {
   return (
-    <div id='dropdown'>
+    <div id='dropdown' className={className}>
       <ul>
         <li className='dropdown_items'>
             <NavLink>shop</NavLink>

@@ -1,0 +1,60 @@
+.swiper-nav-btns {
+  button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 0.5rem;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    background: none;
+    font-size: 1.3rem;
+    color: #a4a4a4;
+    border: 1px solid #a4a4a4;
+    z-index: 4;
+    transition: all 0.5s;
+    &:hover {
+      background-color: var(--main-color);
+      cursor: pointer;
+    }
+  }
+
+  .nav_btn_prev {
+    position: absolute;
+    z-index: 4;
+    bottom: 50%;
+    left: 39px;
+    transform: translateY(-50%);
+  }
+  .nav_btn_next {
+    position: absolute;
+    z-index: 4;
+    bottom: 50%;
+    right: 33px;
+    transform: translateY(-50%);
+  }
+
+  @media screen and (max-width:1200px) {
+    .nav_btn_prev {
+        position: relative;
+        left: 39px;
+        bottom:0;
+
+        transform: translateY(-50%);
+      }
+      .nav_btn_next {
+        position: relative;
+        z-index: 4;
+        bottom:0;
+        transform: translateY(-50%);
+      }
+    width: 100%;
+    margin-top: 30px;
+    button{
+        display: inline-block;
+        margin: 30px 40px 0;
+    }
+  }
+}
