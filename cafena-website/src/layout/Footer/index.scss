@@ -1,9 +1,6 @@
 #footerSection {
   background-color: black;
   padding-top: 125px;
-  padding-bottom: 325px;
-  
-  .container {
     .topFooter {
       display: flex;
       justify-content: space-between;
@@ -40,19 +37,19 @@
       }
       .subscribe {
         form {
-            display: flex;
-            align-items: center;
-            border-bottom: 1px solid #323232;
-            width: 100%;
+          display: flex;
+          align-items: center;
+          border-bottom: 1px solid #323232;
+          width: 100%;
           .email {
             border: none;
             outline: none;
             background: transparent;
-            padding: 15px 160px;
+            padding: 15px;
             font-size: 14px;
             padding-left: 20px;
             color: var(--light-grey-color);
-            
+            width: 350px;
           }
           .subscribeBtn {
             text-transform: uppercase;
@@ -71,43 +68,75 @@
         }
       }
     }
-    .midFooter{
-        margin-top: 65px;
-        .container{
-            .logo{
-                width: 53%;
-                .logoImg{
-                    margin-bottom: 15px;
-
-                }
-                .logoDesc{
-                    .description{
-                        color: white;
-                        font-size: 18px;
-                    }
-
-                }
-
+    .midFooter {
+      margin-bottom: 30px;
+      margin-top: 65px;
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo {
+          width: 53%;
+          .logoImg {
+            margin-bottom: 15px;
+          }
+          .logoDesc {
+            .description {
+              color: white;
+              font-size: 18px;
             }
-            .socialLinks{
-                display: flex;
-                justify-content: flex-end;
-                
-                svg{
-                    color: var(--dark-grey-color);
-                    border: 1px solid var(--dark-grey-color);
-                    margin-right: 10px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-wrap: wrap;
-                    // width: 30px;
-                    // height: 30px;
-                    font-size: 35px;
-                    padding: 10px 10px;
-                }
-            }
+          }
         }
+        .socialLinks {
+          display: flex;
+          justify-content: flex-end;
+
+          svg {
+            color: var(--dark-grey-color);
+            border: 1px solid var(--dark-grey-color);
+            border-radius: 5px;
+            margin-right: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            // width: 30px;
+            // height: 30px;
+            font-size: 37px;
+            padding: 10px 10px;
+            transition: 0.3s;
+          }
+          svg:hover {
+            color: white;
+            border: 1px solid white;
+          }
+        }
+      }
+    }
+    .bottomFooter {
+      border-top: 1px solid #32323d;
+      padding-top: 30px;
+      padding-bottom: 90px;
+      .container {
+        .footerMenu {
+          .navLinks {
+            display: flex;
+            color: white;
+            width: 75%;
+            text-transform: uppercase;
+            .homePage{
+              color: var();
+            }
+            li {
+              margin-right: 55px;
+              font-size: 15px;
+            }
+            li:hover{
+              color: var(--main-color);
+            }
+          }
+        }
+      }
     }
   }
-}
+
