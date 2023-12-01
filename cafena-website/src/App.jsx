@@ -10,6 +10,7 @@ import Menu from './pages/Menu';
 import Shop from './pages/Shop';
 import Contact from './pages/Contact';
 import ShopCart from './pages/ShopCart';
+import Faq from './pages/Faq';
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="/shop" element={<Shop/>} />
           <Route path="/contact" element={<Contact/>} />
           <Route path="/shopCart" element={<ShopCart/>} />
+          <Route path="/faq" element={<Faq/>} />
           
           {/* <Route path="*" element={<NoPage />} /> */}
         </Route>

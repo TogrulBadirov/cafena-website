@@ -19,12 +19,20 @@
     }
     .nav_right {
       display: flex;
-      gap: 30px;
+      gap: 10px;
       .nav_item_icon {
         font-size: 1.4rem;
+        button {
+          border: 0;
+          outline: 0;
+          background-color: transparent;
+          cursor: pointer;
+          padding: 10px;
+        }
       }
       .basket_icon {
         position: relative;
+
         .basket_counter {
           background-color: #80a093;
           border-radius: 50%;
@@ -34,8 +42,8 @@
           align-items: center;
           justify-content: center;
           position: absolute;
-          top: 0px;
-          left: 11px;
+          top: 13px;
+          left: 23px;
           font-size: 12px;
           color: #fff;
         }

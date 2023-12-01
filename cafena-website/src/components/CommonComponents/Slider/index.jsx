@@ -45,6 +45,7 @@ const Slider = () => {
             userPosition="Founder & co"
           />
         </SwiperSlide>
+        
         <SwiperSlide>
           <Slide
             slideLogo="https://xpressrow.com/html/cafena/cafena/assets/images/icons/t-quote.png"

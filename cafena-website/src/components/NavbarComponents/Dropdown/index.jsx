@@ -17,6 +17,9 @@ const Dropdown = ({className}) => {
         <li className='dropdown_items'>
             <NavLink to={"/shopCheckout"}>shop checkout</NavLink>
         </li>
+        <li className='dropdown_items'>
+            <NavLink to={"/faq"}>faq</NavLink>
+        </li>
       </ul>
     </div>
   )

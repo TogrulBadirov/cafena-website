@@ -5,8 +5,13 @@ import { FaBars } from "react-icons/fa";
 import { FaShoppingBasket } from "react-icons/fa";
 import "./index.scss";
 import Dropdown from "../../components/NavbarComponents/Dropdown";
+import SideBarMenu from "../../components/NavbarComponents/SideBarMenu";
+import { useCommonContext } from "../../context/CommonContext";
 
 const Navbar = () => {
+
+  const {setIsSideBarOpen}=useCommonContext()
+
   return (
     <nav id="navbar">
       <div className="container">
@@ -58,18 +63,28 @@ const Navbar = () => {
 
           <ul className="nav_right">
             <li className=" search nav_item_icon">
-              <IoSearchSharp className="nav_item_icon" />
+              <button>
+                <IoSearchSharp />
+              </button>
             </li>
             <li className="bars nav_item_icon">
-              <FaBars />
+              <button>
+                <FaBars />
+              </button>
             </li>
             <li className="basket_icon nav_item_icon">
-              <FaShoppingBasket />
-              <span className="basket_counter">0</span>
+              <button onClick={()=>setIsSideBarOpen(true)}>
+                <FaShoppingBasket />
+                <span className="basket_counter">0</span>
+              </button>
+              
             </li>
           </ul>
         </div>
       </div>
+
+
+      <SideBarMenu />
     </nav>
   );
 };
