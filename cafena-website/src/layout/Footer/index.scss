@@ -1,142 +1,181 @@
 #footerSection {
   background-color: black;
   padding-top: 125px;
-    .topFooter {
-      display: flex;
-      justify-content: space-between;
-      .phone {
-        display: flex;
-        align-items: center;
-        .phoneImg {
-          margin-right: 15px;
-        }
-        .phoneContent {
-          .phoneText {
-            color: white;
-          }
-          .number {
-            color: var(--light-grey-color);
-          }
-        }
-      }
-      .location {
-        display: flex;
-        align-items: center;
-        .locationImg {
-          margin-right: 15px;
-        }
-        .locationContent {
-          .locationText {
-            color: white;
-            text-transform: uppercase;
-          }
-          .address {
-            color: var(--light-grey-color);
-          }
-        }
-      }
-      .subscribe {
-        form {
-          display: flex;
-          align-items: center;
-          border-bottom: 1px solid #323232;
-          width: 100%;
-          .email {
-            border: none;
-            outline: none;
-            background: transparent;
-            padding: 15px;
-            font-size: 14px;
-            padding-left: 20px;
-            color: var(--light-grey-color);
-            width: 350px;
-          }
-          .subscribeBtn {
-            text-transform: uppercase;
-            color: white;
-            letter-spacing: 2px;
-            background: transparent;
-            font-size: 12px;
-            border: none;
-            display: flex;
-            // position: absolute;
-            // right: 70;
-            svg {
-              margin-left: 8px;
-            }
-          }
-        }
-      }
-    }
-    .midFooter {
-      margin-bottom: 30px;
-      margin-top: 65px;
-      .container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        .logo {
-          width: 53%;
-          .logoImg {
-            margin-bottom: 15px;
-          }
-          .logoDesc {
-            .description {
-              color: white;
-              font-size: 18px;
-            }
-          }
-        }
-        .socialLinks {
-          display: flex;
-          justify-content: flex-end;
+  .arrowUp {
+    position: absolute;
+    left: 50%;
+    bottom: 135px;
+    font-size: 15px;
+    background-color: white;
+    svg {
+      color: black;
+      border: 1px solid white;
+      border-radius: 100%;
+      padding: 27px 27px;
+      
 
-          svg {
-            color: var(--dark-grey-color);
-            border: 1px solid var(--dark-grey-color);
-            border-radius: 5px;
-            margin-right: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            // width: 30px;
-            // height: 30px;
-            font-size: 37px;
-            padding: 10px 10px;
-            transition: 0.3s;
-          }
-          svg:hover {
-            color: white;
-            border: 1px solid white;
-          }
+      // top: 0;
+    }
+  }
+  .topFooter {
+    display: flex;
+    justify-content: space-between;
+    .phone {
+      display: flex;
+      align-items: center;
+      .phoneImg {
+        margin-right: 15px;
+      }
+      .phoneContent {
+        .phoneText {
+          color: white;
+        }
+        .number {
+          color: var(--light-grey-color);
         }
       }
     }
-    .bottomFooter {
-      border-top: 1px solid #32323d;
-      padding-top: 30px;
-      padding-bottom: 90px;
-      .container {
-        .footerMenu {
-          .navLinks {
-            display: flex;
-            color: white;
-            width: 75%;
-            text-transform: uppercase;
-            .homePage{
-              color: var();
-            }
-            li {
-              margin-right: 55px;
-              font-size: 15px;
-            }
-            li:hover{
-              color: var(--main-color);
-            }
+    .location {
+      display: flex;
+      align-items: center;
+      .locationImg {
+        margin-right: 15px;
+      }
+      .locationContent {
+        .locationText {
+          color: white;
+          text-transform: uppercase;
+        }
+        .address {
+          color: var(--light-grey-color);
+        }
+      }
+    }
+    .subscribe {
+      form {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #323232;
+        width: 100%;
+        .email {
+          border: none;
+          outline: none;
+          background: transparent;
+          padding: 15px;
+          font-size: 14px;
+          padding-left: 20px;
+          color: var(--light-grey-color);
+          width: 350px;
+        }
+        .subscribeBtn {
+          text-transform: uppercase;
+          color: white;
+          letter-spacing: 2px;
+          background: transparent;
+          font-size: 12px;
+          border: none;
+          display: flex;
+          // position: absolute;
+          // right: 70;
+          svg {
+            margin-left: 8px;
           }
         }
       }
     }
   }
-
+  .midFooter {
+    margin-bottom: 30px;
+    margin-top: 65px;
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .logo {
+        width: 50%;
+        .logoImg {
+          margin-bottom: 15px;
+        }
+        .logoDesc {
+          .description {
+            color: white;
+            font-size: 18px;
+          }
+        }
+      }
+      .socialLinks {
+        display: flex;
+        justify-content: flex-end;
+        svg {
+          color: var(--dark-grey-color);
+          border: 1px solid var(--dark-grey-color);
+          border-radius: 5px;
+          margin-right: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          // width: 30px;
+          // height: 30px;
+          font-size: 37px;
+          padding: 10px 10px;
+          transition: 0.3s;
+        }
+        svg:hover {
+          color: white;
+          border: 1px solid white;
+        }
+      }
+    }
+  }
+  .bottomFooter {
+    border-top: 1px solid #32323d;
+    padding-top: 30px;
+    padding-bottom: 90px;
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .footerMenu {
+        .navLinks {
+          display: flex;
+          color: white;
+          width: 75%;
+          text-transform: uppercase;
+          .homePage {
+            color: var();
+          }
+          li {
+            margin-right: 55px;
+            font-size: 15px;
+          }
+          li:hover {
+            color: var(--main-color);
+          }
+        }
+      }
+      .goTop {
+        button {
+          border: none;
+          outline: none;
+          background: none;
+          span {
+            color: white;
+            text-transform: uppercase;
+            font-size: 15px;
+          }
+          svg {
+            color: white;
+            margin-bottom: 4px;
+            padding-left: 5px;
+            height: auto;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  
+}
