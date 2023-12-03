@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './index.scss'
 import CartProduct from '../../components/ShopCartPageComponents/CartProduct';
-import { Outlet } from 'react-router-dom';
+import { BasketContext } from '../../context/BasketContext';
 const ShopCart = () => {
-  console.log('Rendering ShopCart component');
+  const {basket,clearBasket,basketSubTotal,discountedPrice} = useContext(BasketContext)
   return (
     <>
     <div id='shop_cart'>
@@ -22,29 +22,19 @@ const ShopCart = () => {
               </div>
             </div>
 
-            <CartProduct
-              productImg="https://xpressrow.com/html/cafena/cafena/assets/images/products/t-p-1.png"
-              productName="ESPRESSO RISTRETTO"
-              productPrice="130.00"
-              productQuantity="2"
-              subtotal="130"
+            {basket && basket.map((basketProduct)=>(
+              <CartProduct
+              productImg={basketProduct.image.Image}
+              productName={basketProduct.title}
+              productPrice={basketProduct.price*((100-basketProduct.discount)/100)}
+              productQuantity={basketProduct.count}
+              subtotal={Math.round((discountedPrice(basketProduct) + Number.EPSILON) * 100) / 100}
+              basketProduct= {basketProduct}
             />
+            ))}
 
-            <CartProduct
-              productImg="https://xpressrow.com/html/cafena/cafena/assets/images/products/t-p-1.png"
-              productName="ESPRESSO RISTRETTO"
-              productPrice="130.00"
-              productQuantity="2"
-              subtotal="130"
-            />
 
-            <CartProduct
-              productImg="https://xpressrow.com/html/cafena/cafena/assets/images/products/t-p-1.png"
-              productName="ESPRESSO RISTRETTO"
-              productPrice="130.00"
-              productQuantity="2"
-              subtotal="130"
-            />
+
 
           </div>
         </div>
@@ -52,11 +42,10 @@ const ShopCart = () => {
         <div className='cart_buttons_wrapper'>
             <input type="text" placeholder='Coupon code' />
             <button>apply coupon</button>
-            <button>clear cart </button>
-            <button>update cart</button>
+            <button onClick={()=>clearBasket()}>clear cart </button>
+            <p>{basketSubTotal()}</p>
           </div>
-
-         
+          
       </div>
     </div>
     </>

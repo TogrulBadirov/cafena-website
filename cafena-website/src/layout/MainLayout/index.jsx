@@ -18,7 +18,7 @@ const MainLayout = () => {
     
     <Overlay/>
     <Outlet/>
-    {/* <Footer/> */}
+    <Footer/>
     </CommonProvider>
    
     </>

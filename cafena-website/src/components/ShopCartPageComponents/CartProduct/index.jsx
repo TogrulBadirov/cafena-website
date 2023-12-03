@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext, useRef, useState } from 'react';
 import { IoMdClose } from "react-icons/io";
-import './index.scss'
-const CartProduct = ({ productImg, productName, productPrice, productQuantity, subtotal }) => {
+import './index.scss';
+import { BasketContext } from '../../../context/BasketContext';
+const CartProduct = ({ productImg, productName, productPrice, productQuantity, subtotal, basketProduct }) => {
+  const {removeBasket, updateCount} = useContext(BasketContext)
     return (
         <div id="cart_product">
             <div className='row d-flex align-items-center'>
@@ -23,14 +25,14 @@ const CartProduct = ({ productImg, productName, productPrice, productQuantity, s
                 </p>
                 <p className='col-12  col-md-2 col-lg-2 product_quantity py-2 py-md-4 ps-0'>
                     <span>Product quantity: </span>
-                    {productQuantity}
+                    <input min="1" defaultValue={productQuantity} type="number"   onChange={(e)=>updateCount(basketProduct,e.target.value)} />
                 </p>
                 <p className='col-12  col-md-2 col-lg-2 subtotal py-2 py-md-4 ps-0'>
                     <span>Subtotal: </span>
                     ${subtotal}
                 </p>
                 <div className='remove_btn col-12 col-md-1 col-lg-1 pb-2 py-md-4 ps-0'>
-                    <IoMdClose />
+                    <button onClick={()=>removeBasket(basketProduct)}><IoMdClose /></button>
                 </div>
             </div>
         </div>

@@ -16,9 +16,9 @@ const Navbar = () => {
   const { setIsSideBarOpen, setIsMobileMenuOpen } = useCommonContext();
 
   const firstDropdownItems = [
-    // { name: 'Shop', to: '/shop' },
+    { name: 'Shop', to: '/shop' },
     { name: "Shop Detail", to: "/shopDetail" },
-    { name: "Shop Cart", to: "/shop/shopCart" },
+    { name: "Shop Cart", to: "/shopCart" },
     { name: "shop checkout", to: "/shopCheckout" },
   ];
   const secondDropdownItems = [

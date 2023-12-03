@@ -1,31 +1,24 @@
 import React from "react";
 import SpecialMenuCard from "../SpecialMenuCard";
 import "./index.scss";
+import useFetch from "../../../hooks/UseFetch";
 const SpecialMenuCards = () => {
+  const { data, loading } = useFetch("http://localhost:3000/products")
   return (
     <div id="special_menu_cards">
       <div className="container">
         <div className="row">
-          <SpecialMenuCard
-            cardImg="https://xpressrow.com/html/cafena/cafena/assets/images/menu/menu-1.jpeg"
-            cardName="Americano Coffee"
-            currentPrice="325.00"
-            prevPrice="348"
-          />
+          {data && data.map((product)=>(
+            <SpecialMenuCard
+            key={product.id}
+              cardImg={product.image.thumbnail}
+              cardName={product.title}
+              currentPrice={product.price*((100-product.discount)/100)}
+              prevPrice={product.price}
+              product={product}
+            />
 
-          <SpecialMenuCard
-            cardImg="https://xpressrow.com/html/cafena/cafena/assets/images/menu/menu-1.jpeg"
-            cardName="Americano Coffee"
-            currentPrice="325.00"
-            prevPrice="348"
-          />
-
-          <SpecialMenuCard
-            cardImg="https://xpressrow.com/html/cafena/cafena/assets/images/menu/menu-1.jpeg"
-            cardName="Americano Coffee"
-            currentPrice="325.00"
-            prevPrice="348"
-          />
+          ))}
         </div>
       </div>
     </div>
