@@ -1,5 +1,6 @@
 import React from "react";
-import { FaArrowUp, FaLongArrowAltUp } from "react-icons/fa";
+import { FaLongArrowAltUp } from "react-icons/fa";
+import { FaArrowUpLong } from "react-icons/fa6";
 import {
   FaPaperPlane,
   FaTwitter,
@@ -25,8 +26,11 @@ const Footer = () => {
   return (
     <footer id="footerSection">
       <div className="arrowUp">
-        <FaLongArrowAltUp />
-      </div>
+        <button onClick={()=>goToTop()}>
+          <FaArrowUpLong/>
+        </button>
+        
+        </div>
       <div className="container">
         <div className="topFooter">
           <div className="phone">
