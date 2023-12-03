@@ -1,7 +1,8 @@
 import React from "react";
 import "./index.scss";
+import { IoMdCheckmark } from "react-icons/io";
 
-const AboutUsSection = () => {
+const AboutUs = () => {
   return (
     <section id="aboutUs">
       <div className="container">
@@ -35,7 +36,7 @@ const AboutUsSection = () => {
         </div>
         <div className="textContent">
           <div className="subTitle">
-            <span className="textSubTitle">ABOUT US</span>
+            <span className="textSubTitle">about cafena</span>
           </div>
           <div className="mainTitle">
             <h2 className="title">
@@ -48,12 +49,30 @@ const AboutUsSection = () => {
               suscipit ligula volutpat, a feugiat urna maximus. Cras massa
               nibhtincidunt.
             </p>
-            <p className="secondDesc">
-              Donec et nibh maximus, congue est eu, mattis nunc. Praesent ut
-              quam quis quam venenatis fringilla. Morbi vestibulum id tellus
-              mmodo mattis. Aliquam erat volutpat. Aenean accumsan id mi nec
-              semper. Lorem ipsum.
-            </p>
+          </div>
+          <div className="listCheck">
+            <ul className="checkboxLists">
+              <li className="checkboxList">
+                <div className="checkbox">
+                  <IoMdCheckmark />
+                </div>
+                <span> What is Lorem Ipsum Lorem Ipsum is simply.</span>
+              </li>
+              <li className="checkboxList">
+                <div className="checkbox">
+                  <IoMdCheckmark />
+                </div>
+                <span> Dummy text of the printing text.</span>
+              </li>
+              <li className="checkboxList">
+                <div className="checkbox">
+                  <IoMdCheckmark />
+                </div>
+                <span>
+                 Typesetting industry Lorem Ipsum has been the industry's
+                </span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -61,4 +80,4 @@ const AboutUsSection = () => {
   );
 };
 
-export default AboutUsSection;
+export default AboutUs;

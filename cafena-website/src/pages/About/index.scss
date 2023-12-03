@@ -1,0 +1,474 @@
+#About {
+  .container {
+    display: flex;
+    flex-direction: column;
+    .whyChooseUs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      .title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 40px;
+        .subTitle {
+          span {
+            color: white;
+            background-color: #fff;
+            background-color: var(--main-color);
+            text-transform: uppercase;
+            font-size: 12px;
+            padding: 3px 15px;
+            border-radius: 3px;
+            letter-spacing: 2px;
+            display: inline-block;
+            margin-bottom: 23px;
+          }
+        }
+        .mainTitle {
+          text-transform: uppercase;
+          text-align: center;
+          h2 {
+            font-size: 55px;
+          }
+        }
+      }
+      .cards {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        padding-bottom: 120px;
+        .card {
+          border: 1px solid #e2dfdd;
+          padding: 50px 45px;
+          border-radius: 10px;
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          transition: 0.2s;
+          &:hover {
+            .cardBtn {
+              background-color: var(--main-color);
+              button {
+                svg {
+                  fill: white;
+                }
+              }
+            }
+          }
+          .cardTitle {
+            text-transform: uppercase;
+            font-size: 15px;
+            padding: 25px 0;
+          }
+          .cardDesc {
+            display: flex;
+            text-align: center;
+            padding-bottom: 25px;
+            .description {
+              color: #6c6c6c;
+            }
+            font-size: 17px;
+          }
+          .cardBtn {
+            border: 1px solid #e2dfdd;
+            padding: 10px 15px;
+            border-radius: 6px;
+            transition: 0.4s;
+            cursor: pointer;
+            button {
+              background: none;
+              outline: none;
+              border: none;
+              svg {
+                fill: var(--dark-grey-color);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+#bestCoffee {
+  .bgCoffee {
+    position: relative;
+    object-fit: cover;
+    img {
+      width: 50%;
+    }
+    .container {
+      .textBox {
+        width: 700px;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 61%;
+        transform: translate(-50%, -50%);
+        padding-top: 80px;
+        padding-left: 100px;
+        padding-right: 130px;
+        padding-bottom: 80px;
+        border: 1px solid #e2dfdd;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0px 14px 40px 0px rgba(220, 220, 220, 0.3);
+        .textBoxTitle {
+          text-transform: uppercase;
+          margin-bottom: 25px;
+          h2 {
+            font-size: 55px;
+            line-height: 57px;
+          }
+        }
+        .textBoxDesc {
+          color: var(--dark-grey-color);
+          font-size: 18px;
+          .initialDesc {
+            margin-bottom: 35px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1199px) {
+  .container {
+    .whyChooseUs {
+      .cards {
+        flex-wrap: wrap;
+        max-width: 400px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1199px) {
+  #bestCoffee {
+    .bgCoffee {
+      img {
+        width: 100%;
+      }
+      .container {
+        .textBox {
+          top: 50%;
+          left: 50%;
+          width: 480px;
+          padding-top: 70px;
+          padding-left: 90px;
+          padding-right: 120px;
+          padding-bottom: 70px;
+          .textBoxTitle {
+            h2 {
+              font-size: 35px;
+              line-height: 37px;
+            }
+          }
+          .textBoxDesc {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 766px) {
+  #bestCoffee {
+    .bgCoffee {
+      .container {
+        .textBox {
+          padding-top: 35px;
+          padding-left: 55px;
+          padding-right: 85px;
+          padding-bottom: 35px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 621px) {
+  #bestCoffee {
+    .bgCoffee {
+      .container {
+        .textBox {
+          padding-top: 25px;
+          padding-left: 45px;
+          padding-right: 65px;
+          padding-bottom: 25px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 531px) {
+  #bestCoffee {
+    .bgCoffee {
+      .container {
+        .textBox {
+          position: relative;
+          max-width: 300px;
+          padding-top: 25px;
+          padding-left: 30px;
+          padding-right: 35px;
+          padding-bottom: 25px;
+          .textBoxTitle {
+            h2 {
+              font-size: 14px;
+              line-height: 10px;
+            }
+          }
+          .textBoxDesc {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 426px) {
+  #bestCoffee {
+    .bgCoffee {
+      .container {
+        .textBox {
+          padding-top: 25px;
+          padding-left: 25px;
+          padding-right: 5px;
+          padding-bottom: 25px;
+          .textBoxTitle {
+            h2 {
+              font-size: 15px;
+              line-height: 10px;
+            }
+          }
+          .textBoxDesc {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 321px) {
+  #bestCoffee {
+    .bgCoffee {
+      .container {
+        .textBox {
+          padding-top: 20px;
+          padding-left: 20px;
+          padding-right: 5px;
+          padding-bottom: 20px;
+          .textBoxTitle {
+            h2 {
+              font-size: 13px;
+              line-height: 10px;
+            }
+          }
+          .textBoxDesc {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+#OurChef {
+  padding-top: 115px;
+  padding-bottom: 115px;
+  .container {
+    .title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 40px;
+      .subTitle {
+        span {
+          color: white;
+          background-color: #fff;
+          background-color: var(--main-color);
+          text-transform: uppercase;
+          font-size: 12px;
+          padding: 3px 15px;
+          border-radius: 3px;
+          letter-spacing: 2px;
+          display: inline-block;
+          margin-bottom: 23px;
+        }
+      }
+      .mainTitle {
+        text-transform: uppercase;
+        text-align: center;
+        h2 {
+          font-size: 55px;
+        }
+      }
+    }
+    .ourChefCards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      .ourChefCard {
+        border: 1px solid #e2dfdd;
+        border-radius: 12px;
+        padding: 35px 35px;
+        &:hover {
+          .cardImg {
+            img {
+              border-radius: 0 60px 60px 60px;
+            }
+          }
+        }
+        .cardImg {
+          position: relative;
+          width: 280px;
+          img {
+            object-fit: cover;
+            width: 100%;
+            height: 310px;
+            border-radius: 60px 60px 60px 0;
+            transition: 0.3s ease-in-out;
+          }
+          .cardSocialLink {
+            position: absolute;
+            top: 8%;
+            right: 0;
+            &:hover .linkList li {
+              opacity: 1;
+            }
+            .icon {
+              width: 45px;
+              height: 45px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-color: white;
+              border-radius: 10px;
+              box-shadow: 0px 6px 21px 0px rgba(118, 118, 118, 0.09);
+
+              button {
+                background: none;
+                outline: none;
+                border: none;
+
+                svg {
+                  fill: rgb(172, 166, 166);
+                  font-size: 13px;
+                }
+              }
+            }
+            .linkList {
+              display: flex;
+              flex-direction: column;
+
+              & li:nth-child(1) {
+                transition-delay: 0.1s;
+              }
+              & li:nth-child(2) {
+                transition-delay: 0.2s;
+              }
+              & li:nth-child(3) {
+                transition-delay: 0.3s;
+              }
+              & li:nth-child(4) {
+                transition-delay: 0.4s;
+              }
+              li {
+                opacity: 0;
+                transition: 0.6s;
+                background-color: white;
+                margin-top: 8px;
+                width: 45px;
+                height: 45px;
+                border-radius: 10px;
+                gap: 8px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 14px;
+                button {
+                  border: none;
+                  outline: none;
+                  background: transparent;
+
+                  svg {
+                    fill: var(--dark-grey-color);
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .cardName {
+          padding-top: 30px;
+          text-transform: uppercase;
+          .name {
+            font-size: 18px;
+          }
+        }
+        .cardInfo {
+          color: var(--main-color);
+          padding-top: 10px;
+          padding-bottom: 10px;
+          text-transform: uppercase;
+          .info {
+            font-weight: 600;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1199px) {
+  #OurChef {
+    .container {
+      .title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 40px;
+        .subTitle {
+          span {
+            color: white;
+            background-color: #fff;
+            background-color: var(--main-color);
+            text-transform: uppercase;
+            font-size: 12px;
+            padding: 3px 15px;
+            border-radius: 3px;
+            letter-spacing: 2px;
+            display: inline-block;
+            margin-bottom: 23px;
+          }
+        }
+
+        .mainTitle {
+          text-transform: uppercase;
+          text-align: center;
+          h2 {
+            font-size: 55px;
+          }
+        }
+      }
+      .ourChefCards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .ourChefCard {
+         max-width: 400px;
+          .cardImg {
+            
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
