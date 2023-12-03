@@ -1,0 +1,80 @@
+#shop-products{
+
+        .container{
+                .pagination{
+                    button{
+                        background-color: transparent;
+                        outline: none;
+                        border: none;
+                        width: 40px;
+                        height: 40px;
+                        margin-left: 10px;
+                        border-radius: 5px;
+                        border: 1px solid var(--dark-grey-color);
+                        line-height: 10px;
+                        color: var(--dark-grey-color);
+                        &:hover{
+                            color: white;
+                            background-color: var(--main-color);
+                        }
+                    }
+                }
+            .product-sort{
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                padding: 5px 20px;
+                border-radius: 10px;
+                border: 1px solid #E2DFDD;
+                line-height: 30px;
+                button{
+                    background-color: transparent;
+                    border: none;
+                    outline: none;
+                    padding: 0 15px;
+                }
+            }
+            .filters{
+                h4{
+                    margin-top: 40px;
+                    margin-bottom: 10px;
+                    font-family: "Bebas Neue", cursive;
+                    font-size: 30px;
+                }
+                .search-filter{
+                    
+                    input{
+                        width: 350px;
+                        max-width: 350px;
+                        padding: 10px;
+                        border-radius: 5px;
+                        outline: none;
+                        border: 1px solid #E2DFDD;
+                    }
+                }
+                .category-filter{
+                    display: flex;
+                    flex-direction: column;
+                    button{
+                        max-width: 350px;
+                        padding: 10px;
+                        background-color: transparent;
+                        margin-top: 10px;
+                        border-radius: 10px;
+                        outline: none ;
+                        border: 1px solid #E2DFDD;
+                    }
+                }
+                .price-filter{
+                    h4{
+                        margin-bottom: 50px;
+                    }
+                    span{
+                        // margin-top: 20px;
+                        padding: 2px;
+                    }
+                }
+            }
+        }
+    
+}

@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
-import { FaShoppingBasket, FaRegEye } from "react-icons/fa";
+import { FaRegEye, FaShoppingBasket } from "react-icons/fa";
 import { IoMdHeartEmpty } from "react-icons/io";
-import "./index.scss";
 import { BasketContext } from "../../../context/BasketContext";
+import {Link} from "react-router-dom"
+import "./index.scss";
 const SpecialMenuCard = ({ cardImg, cardName, currentPrice, prevPrice, product }) => {
   const {basket, addToBasket, IsProductInBasket} = useContext(BasketContext)
   return (
@@ -35,7 +36,11 @@ const SpecialMenuCard = ({ cardImg, cardName, currentPrice, prevPrice, product }
                 <IoMdHeartEmpty />
               </div>
               <div className="card_icon">
-                <FaRegEye />
+                  <Link to={`/${product.id}`}> 
+                <button> 
+                  <FaRegEye /> 
+                  </button>
+                  </Link> 
               </div>
             </div>
           </div>
