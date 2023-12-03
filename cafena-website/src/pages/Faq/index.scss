@@ -1,0 +1,99 @@
+#faq_page {
+  margin: 80px 0;
+  padding: 0 clamp(0rem, -4.5775rem + 19.5305vw, 13rem);
+  .faq_wrapper {
+    border-radius: 10px;
+    box-shadow: 0px 14px 40px 0px rgba(220, 220, 220, 0.3);
+    border: 1px solid #e2dfdd;
+    padding: 60px 80px;
+    padding-right: clamp(5rem, -35rem + 53.3333vw, 13rem);
+    #accardion {
+      display: flex;
+      gap: 20px;
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+      .accardion_icon {
+        .accardion_btn {
+          outline: none;
+          width: 35px;
+          height: 35px;
+          background-color: #fff;
+          border: 1px solid #e2dfdd;
+          border-radius: 5px;
+          color: #a5a5a7;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 16px;
+          transition: all 0.5s ease;
+          box-shadow: 0px 14px 40px 0px rgba(220, 220, 220, 0.3);
+          &.button_active {
+            border: 1px solid var(--main-color);
+            outline: none;
+            background-color: var(--main-color);
+            color: #fff;
+            transform: rotate(-180deg);
+            transition: all 0.7s ease;
+          }
+          &.button_close {
+            transform: rotate(0deg);
+            transition: all 0.5s ease;
+          }
+
+          &:hover {
+            border: 1px solid var(--main-color);
+            outline: none;
+            background-color: var(--main-color);
+            color: #fff;
+          }
+        }
+      }
+
+      .accardion_content {
+        .accardion_question {
+          button {
+            font-size: 20px;
+            font-weight: 500;
+            color: #000;
+            background: none;
+            outline: none;
+            border: none;
+            text-align: left;
+          }
+        }
+        .accardion_answer {
+          padding-top: 15px;
+          max-height: 0;
+          overflow: hidden;
+        //   transition: max-height 5s ease, visibility 5s ease, opacity 5s ease;
+          visibility: hidden;
+          opacity: 0;
+        transition: all 7s ease;
+          &.active {
+            max-height: 900px;
+            transition: all 0.9s ease;
+            visibility: visible;
+            opacity: 1;
+          }
+
+          p {
+            color: var(--dark-grey-color);
+            font-size: clamp(0.9375rem, 0.476rem + 2.3077vw, 1.125rem);
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    .faq_wrapper {
+      padding: 40px 50px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .faq_wrapper {
+      padding: 35px 10px;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+#accardion {
+  display: flex;
+  gap: 20px;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .accardion_icon {
+    button {
+      outline: none;
+      width: 35px;
+      height: 35px;
+      background-color: #fff;
+      border: 1px solid #e2dfdd;
+      border-radius: 5px;
+      color: #a5a5a7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      box-shadow: 0px 14px 40px 0px rgba(220, 220, 220, 0.3);
+      &:hover {
+        border: 1px solid var(--main-color);
+        outline: none;
+        background-color: var(--main-color);
+        color: #fff;
+      }
+    }
+  }
+
+  .accardion_content {
+    .accardion_question {
+      button {
+        font-size: 20px;
+        font-weight: 500;
+        color: #000;
+        background: none;
+        outline: none;
+        border: none;
+      }
+    }
+    .accardion_answer {
+      padding-top: 15px;
+      height: 0;
+      overflow: hidden;
+      transition: all 0.4s ease;
+      &.active {
+        height: auto;
+        max-height: 900px;
+        transition: all 0.4s ease;
+      }
+
+      p {
+        color: var(--dark-grey-color);
+        font-size: clamp(0.9375rem, 0.476rem + 2.3077vw, 1.125rem);
+      }
+    }
+  }
+}

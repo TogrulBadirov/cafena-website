@@ -1,0 +1,79 @@
+#SideBarMenu {
+  background-color: #fff;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  &.open{
+    width: 300px;
+    transform: translateX(0);
+    transition: all .5s ease;
+  }
+  &.closed{
+    width: 300px;
+    transform: translateX(300px);
+    transition: all .5s ease;
+
+  }
+  .close_btn {
+    button {
+      border: none;
+      outline: none;
+      font-size: 1.6rem;
+      width: 37px;
+      height: 37px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #000;
+      color: #fff;
+    }
+  }
+
+  .side_bar_content {
+    padding: 20px 25px;
+    .cart_items_count {
+      padding: 0 0 12px;
+      font-size: 18px;
+      font-family: "Jost", sans-serif;
+      text-transform: uppercase;
+      font-weight: 600;
+      display: block;
+      border-bottom: 1px solid #f4f1ee;
+      margin-bottom: 15px;
+    }
+    .side_bar_products{
+      padding-right: 10px;
+      max-height: 450px;
+      overflow-y: auto;
+    }
+    .side_bar_subtotal {
+      border-bottom: 1px solid #f4f1ee;
+      border-top: 1px solid #f4f1ee;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      margin: 15px 0;
+      p {
+        color: #010103;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+    }
+
+    .side_bar_buttons {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    &.open{
+        width: 100%;
+        transform: translateX(0);
+        transition: all .5s ease;
+      }
+    
+  }
+}

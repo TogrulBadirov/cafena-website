@@ -1,0 +1,35 @@
+.bread_crumbs {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://xpressrow.com/html/cafena/cafena/assets/images/bg/breadcrumb-bg-1.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  text-align: center;
+  padding: 140px 0;
+  margin: 10px 0;
+  position: relative;
+  .bread_img {
+    position: absolute;
+  }
+  .img1 {
+    top: 0;
+    left: 0;
+  }
+  .img2 {
+    bottom: 0;
+    left: 0;
+  }
+  .bread_crumbs_title {
+    color: #fff;
+    font-size: clamp(2.8125rem, 2.3495rem + 2.3148vw, 4.375rem);
+  }
+  .bread_crumb_link{
+    padding: 10px 0;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #fff;
+  }
+}

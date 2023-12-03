@@ -19,23 +19,54 @@
     }
     .nav_right {
       display: flex;
-      gap: 30px;
+      align-items: center;
+      gap: 5px;
       .nav_item_icon {
         font-size: 1.4rem;
+        button {
+          border: 0;
+          outline: 0;
+          background-color: transparent;
+          cursor: pointer;
+          padding: 8px;
+        }
+      }
+      .bars{
+        font-size: 1.6rem;
+        display: none;
       }
       .basket_icon {
         position: relative;
+
         .basket_counter {
           background-color: #80a093;
           border-radius: 50%;
-          width: 20px;
-          height: 20px;
+          width: 16px;
+          height: 16px;
           display: flex;
           align-items: center;
           justify-content: center;
           position: absolute;
-          top: 0px;
-          left: 11px;
+          top: 10px;
+          left: 24px;
+          font-size: 12px;
+          color: #fff;
+        }
+      }
+      .heart{
+        font-size: 1.2rem;
+        position: relative;
+        .wishlist_counter {
+          background-color: #80a093;
+          border-radius: 50%;
+          width: 16px;
+          height: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          top: 8px;
+          left: 24px;
           font-size: 12px;
           color: #fff;
         }
@@ -122,7 +153,44 @@
         .nav_left_links {
           display: none;
         }
+        
+        
       }
+      .nav_right {
+        .bars{
+          font-size: 1.6rem;
+          display: block !important;
+        }
+       
+      }
+      
     }
+    
   }
+}
+
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.header-sticky {
+  position: fixed;
+  top: 0;
+  transform: translateY(0%);
+  left: 0;
+  z-index: 10;
+  background-color: #000;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  animation: fadeInDown 0.5s ease-in-out;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  
 }
