@@ -1,8 +1,11 @@
 import React from 'react'
 import './index.scss'
 import CartProduct from '../../components/ShopCartPageComponents/CartProduct';
+import { Outlet } from 'react-router-dom';
 const ShopCart = () => {
+  console.log('Rendering ShopCart component');
   return (
+    <>
     <div id='shop_cart'>
       <div className='container'>
         <div className='shop_content'>
@@ -56,6 +59,7 @@ const ShopCart = () => {
          
       </div>
     </div>
+    </>
   )
 }
 

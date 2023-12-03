@@ -1,28 +1,24 @@
-import React from 'react'
-import { NavLink } from "react-router-dom";
-import './index.scss'
-const Dropdown = ({className}) => {
-  return (
-    <div id='dropdown' className={className}>
-      <ul>
-        <li className='dropdown_items'>
-            <NavLink to={"/shop"}>shop</NavLink>
-        </li>
-        <li className='dropdown_items'>
-            <NavLink to={"/shopDetail"}>shop detail</NavLink>
-        </li>
-        <li className='dropdown_items'>
-            <NavLink to={"/shopCart"}>shop cart</NavLink>
-        </li>
-        <li className='dropdown_items'>
-            <NavLink to={"/shopCheckout"}>shop checkout</NavLink>
-        </li>
-        <li className='dropdown_items'>
-            <NavLink to={"/faq"}>faq</NavLink>
-        </li>
-      </ul>
-    </div>
-  )
-}
+  import React from 'react'
+  import { NavLink } from "react-router-dom";
+  import './index.scss'
+  const Dropdown = ({ className, links}) => {
+    return (
+      <div id='dropdown' className={className}>
+        <ul>
+          {
+            links.map((link,i)=>(
+            <>
+              <li key={i} className='dropdown_items'>
+              <NavLink to={link.to}>{link.name}</NavLink>
+            </li>
+            
+            </>
+            
+            ))
+          }
+        </ul>
+      </div>
+    )
+  }
 
-export default Dropdown
+  export default Dropdown

@@ -1,0 +1,33 @@
+#not_found{
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
+    url("https://cdn.wallpapersafari.com/34/12/CueSa0.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    h1{
+        font-size: clamp(2.5rem, -0.463rem + 14.8148vw, 12.5rem);
+        span{
+            font-size: clamp(1.25rem, 0.8796rem + 1.8519vw, 2.5rem);
+        }
+    }
+
+    .error_info{
+        font-size: clamp(1.125rem, 0.9028rem + 1.1111vw, 1.875rem);
+        padding: 20px 0;
+    }
+    button{
+        border: none;
+        outline: none;
+        background: none;
+        color: #fff;
+        font-size: 25px;
+        text-decoration: underline;
+    }
+}

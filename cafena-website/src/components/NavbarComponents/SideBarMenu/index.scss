@@ -43,44 +43,11 @@
       border-bottom: 1px solid #f4f1ee;
       margin-bottom: 15px;
     }
-
-    .side_bar_products {
-      .side_bar_product {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 10px;
-        margin: 15px 0;
-        .side_bar_product_img {
-          max-width: 50px;
-          img {
-            width: 100%;
-          }
-        }
-        .side_bar_product_name {
-          color: #010103;
-          font-family: "Jost", sans-serif;
-          font-size: 0.9rem;
-        }
-        .side_bar_product_price {
-          font-weight: 600;
-        }
-        .product_remove_btn {
-          border: none;
-          outline: none;
-          background-color: #80a093;
-          border-radius: 50%;
-          color: #fff;
-          width: 24px;
-          height: 24px;
-          font-size: 1.3rem;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-      }
+    .side_bar_products{
+      padding-right: 10px;
+      max-height: 450px;
+      overflow-y: auto;
     }
-
     .side_bar_subtotal {
       border-bottom: 1px solid #f4f1ee;
       border-top: 1px solid #f4f1ee;

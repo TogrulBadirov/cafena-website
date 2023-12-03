@@ -5,12 +5,13 @@ export const CommonContext=createContext()
 const CommonProvider = ({children}) => {
 
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
-    
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const data={
     isSideBarOpen,
-    setIsSideBarOpen
+    setIsSideBarOpen,
+    isMobileMenuOpen,
+    setIsMobileMenuOpen
   }
-
   return (
     <CommonContext.Provider value={data}>
         {children}
