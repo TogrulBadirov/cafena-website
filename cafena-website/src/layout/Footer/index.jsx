@@ -1,15 +1,36 @@
 import React from "react";
-import { FaPaperPlane, FaTwitter, FaFacebookF, FaYoutube, FaGooglePlusG, FaInstagram} from "react-icons/fa";
+import { FaLongArrowAltUp } from "react-icons/fa";
+import { FaArrowUpLong } from "react-icons/fa6";
+import {
+  FaPaperPlane,
+  FaTwitter,
+  FaFacebookF,
+  FaYoutube,
+  FaGooglePlusG,
+  FaInstagram,
+} from "react-icons/fa";
 import "./index.scss";
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom";
 
 const Footer = () => {
   const openInNewTab = (to) => {
-    const newWindow = window.open(to, '_blank');
+    const newWindow = window.open(to, "_blank");
     newWindow.focus();
+  };
+  const goToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behaviour: "smooth",
+    });
   };
   return (
     <footer id="footerSection">
+      <div className="arrowUp">
+        <button onClick={()=>goToTop()}>
+          <FaArrowUpLong/>
+        </button>
+        
+        </div>
       <div className="container">
         <div className="topFooter">
           <div className="phone">
@@ -51,39 +72,86 @@ const Footer = () => {
             </form>
           </div>
         </div>
-        <div className="midFooter">
-          <div className="container">
-            <div className="logo">
-              <div className="logoImg">
-                <img
-                  src="https://xpressrow.com/html/cafena/cafena/assets/images/logo/logo.png"
-                  alt=""
-                />
-              </div>
-              <div className="logoDesc">
-                <p className="description">
-                  Donec et nibh maximus, congue est eu, mattis nunc. Praesent ut
-                  quam quis quam venenatis fringilla. Morbi vestibulum
-                </p>
-              </div>
+      </div>
+      <div className="midFooter">
+        <div className="container">
+          <div className="logo">
+            <div className="logoImg">
+              <img
+                src="https://xpressrow.com/html/cafena/cafena/assets/images/logo/logo.png"
+                alt=""
+              />
             </div>
-            <div className="socialLinks">
-            <Link onClick={() => openInNewTab('https://twitter.com/elonmusk')}>
-            <FaTwitter />
-            </Link>
-            <Link onClick={() => openInNewTab('https://www.facebook.com/elon.musk.555')}>
-            <FaFacebookF />
-            </Link>
-            <Link onClick={() => openInNewTab(' https://www.youtube.com/@SpaceX')}>
-               <FaYoutube />
-            </Link>
-           <Link onClick={() => openInNewTab('https://youtu.be/SegaPbTyFrQ?si=UZv3VXVxlVGnFdhH')}>
-            <FaGooglePlusG />
-           </Link>
-            <Link onClick={() => openInNewTab('https://www.instagram.com/spacex/')}>
-            <FaInstagram />
-            </Link>
+            <div className="logoDesc">
+              <p className="description">
+                Donec et nibh maximus, congue est eu, mattis nunc. Praesent ut
+                quam quis quam venenatis fringilla. Morbi vestibulum
+              </p>
             </div>
+          </div>
+          <div className="socialLinks">
+            <Link onClick={() => openInNewTab("https://twitter.com/elonmusk")}>
+              <FaTwitter />
+            </Link>
+            <Link
+              onClick={() =>
+                openInNewTab("https://www.facebook.com/elon.musk.555")
+              }
+            >
+              <FaFacebookF />
+            </Link>
+            <Link
+              onClick={() => openInNewTab(" https://www.youtube.com/@SpaceX")}
+            >
+              <FaYoutube />
+            </Link>
+            <Link
+              onClick={() =>
+                openInNewTab("https://youtu.be/SegaPbTyFrQ?si=UZv3VXVxlVGnFdhH")
+              }
+            >
+              <FaGooglePlusG />
+            </Link>
+            <Link
+              onClick={() => openInNewTab("https://www.instagram.com/spacex/")}
+            >
+              <FaInstagram />
+            </Link>
+          </div>
+        </div>
+      </div>
+      <div className="bottomFooter">
+        <div className="container">
+          <div className="footerMenu">
+            <ul className="navLinks">
+              <li className="homePage">
+                <NavLink to="/">Home</NavLink>
+              </li>
+              <li>
+                <NavLink to="/about">About</NavLink>
+              </li>
+              <li>
+                <NavLink to="/menu">Menu</NavLink>
+              </li>
+              <li>
+                <NavLink>Reservation</NavLink>
+              </li>
+              <li>
+                <NavLink>Pages</NavLink>
+              </li>
+              <li>
+                <NavLink to="/shop">Shop</NavLink>
+              </li>
+              <li>
+                <NavLink to="/blog">Blog</NavLink>
+              </li>
+            </ul>
+          </div>
+          <div className="goTop">
+            <button onClick={() => goToTop()}>
+              <span>go top</span>
+              <FaLongArrowAltUp />
+            </button>
           </div>
         </div>
       </div>
