@@ -32,7 +32,7 @@
   }
 
   .side_bar_content {
-    padding: 20px 25px;
+    padding: 20px 15px 20px 25px ;
     .cart_items_count {
       padding: 0 0 12px;
       font-size: 18px;
@@ -43,9 +43,13 @@
       border-bottom: 1px solid #f4f1ee;
       margin-bottom: 15px;
     }
+    .empty_cart{
+      font-size: 20px;
+      margin: 20px 0;
+    }
     .side_bar_products{
       padding-right: 10px;
-      max-height: 450px;
+      max-height: 420px;
       overflow-y: auto;
     }
     .side_bar_subtotal {
@@ -65,6 +69,75 @@
     .side_bar_buttons {
       display: flex;
       justify-content: space-between;
+      button{
+        padding: 10px 15px;
+        border: 1px solid var(--light-grey-color);
+        background-color: transparent;
+        border-radius: 5px;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 2px;
+        line-height: 29px;
+        &:hover{
+            &::after{
+                width: 100%;
+                transition-delay: left 300ms;
+                left: 0;
+            }
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0; 
+            right: 0;
+            transform-origin: right;
+            height: 100%;
+            width: 0;
+            background-color: var(--main-color);
+            transition: 0.3s ease-in-out;
+            
+        }
+        
+    }
+    .dark{
+        background-color: #fff;
+        color: #000;
+        transition: 0.3s ease-in-out;
+        position: relative;
+        overflow: hidden;
+        span{
+            position: relative;
+            z-index: 10 ;
+        }
+        &:hover{
+            color: #fff;
+            
+        }
+        
+        
+    }
+    .light{
+        background-color: var(--main-color);
+        color: #fff;
+        transition: 0.3s ease-in-out;
+        position: relative;
+        overflow: hidden;
+        span{
+            position: relative;
+            z-index: 10 ;
+        }
+        &:hover{
+            color: #fff;
+            
+        }
+        &::after{
+            
+            background-color: #010103;
+            
+            
+        }
+    }
     }
   }
 

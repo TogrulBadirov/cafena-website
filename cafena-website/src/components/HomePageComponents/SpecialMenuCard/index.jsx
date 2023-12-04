@@ -2,10 +2,18 @@ import React, { useContext } from "react";
 import { FaRegEye, FaShoppingBasket } from "react-icons/fa";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { BasketContext } from "../../../context/BasketContext";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 import "./index.scss";
-const SpecialMenuCard = ({ cardImg, cardName, currentPrice, prevPrice, product }) => {
-  const {basket, addToBasket, IsProductInBasket} = useContext(BasketContext)
+import { useWishListContext } from "../../../context/WishListContext";
+const SpecialMenuCard = ({
+  cardImg,
+  cardName,
+  currentPrice,
+  prevPrice,
+  product,
+}) => {
+  const { basket, addToBasket, IsProductInBasket } = useContext(BasketContext);
+  const {addToWishList}=useWishListContext()
   return (
     <div className="col-12 col-lg-6 col-xl-4 card_margin">
       <div id="special_menu_card">
@@ -30,17 +38,19 @@ const SpecialMenuCard = ({ cardImg, cardName, currentPrice, prevPrice, product }
 
             <div className="menu_card_icons">
               <div className="card_icon">
-                <button onClick={()=>addToBasket(product)}><FaShoppingBasket /></button>
+                <button onClick={() => addToBasket(product)}>
+                  <FaShoppingBasket />
+                </button>
               </div>
               <div className="card_icon">
-                <IoMdHeartEmpty />
+                <button onClick={()=>addToWishList(product)}><IoMdHeartEmpty /></button>
               </div>
               <div className="card_icon">
-                  <Link to={`/${product.id}`}> 
-                <button> 
-                  <FaRegEye /> 
+                <Link to={`/${product.id}`}>
+                  <button>
+                    <FaRegEye />
                   </button>
-                  </Link> 
+                </Link>
               </div>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { IoSearchSharp } from "react-icons/io5";
 import { HiBars3 } from "react-icons/hi2";
@@ -9,12 +9,14 @@ import Dropdown from "../../components/NavbarComponents/Dropdown";
 import SideBarMenu from "../../components/NavbarComponents/SideBarMenu";
 import { useCommonContext } from "../../context/CommonContext";
 import MobileMenu from "../../components/NavbarComponents/MobileMenu";
-
+import { useWishListContext } from "../../context/WishListContext";
+import { BasketContext } from '../../context/BasketContext';
 const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false);
-    const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
   const { setIsSideBarOpen, setIsMobileMenuOpen } = useCommonContext();
-
+  const {favItems}=useWishListContext()
+  const {basket} = useContext(BasketContext)
   const firstDropdownItems = [
     { name: 'Shop', to: '/shop' },
     { name: "Shop Detail", to: "/shopDetail" },
@@ -110,14 +112,14 @@ const Navbar = () => {
               <NavLink to={"/wishlist"}>
                 <button>
                   <BsHeart />
-                  <span className="wishlist_counter">0</span>
+                  <span className="wishlist_counter">{favItems.length}</span>
                 </button>
               </NavLink>
             </li>
             <li className="basket_icon nav_item_icon">
               <button onClick={() => setIsSideBarOpen(true)}>
                 <FaShoppingBasket />
-                <span className="basket_counter">0</span>
+                <span className="basket_counter">{basket.length}</span>
               </button>
             </li>
             <li className="bars nav_item_icon">

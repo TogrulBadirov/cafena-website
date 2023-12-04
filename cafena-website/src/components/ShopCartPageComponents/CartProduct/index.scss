@@ -11,12 +11,25 @@
   }
   .product_name{
     font-size: clamp(0.8125rem, 0.0625rem + 3.75vw, 1rem);
+    text-transform: uppercase;
   }
- 
+  .product_quantity{
+    input{
+      width: 50px;
+      outline: none;
+      border: none;
+    }
+  }
   .remove_btn {
-    color: red;
-    font-size: 20px;
-    cursor: pointer;
+    button{
+      border: none;
+      outline: none;
+      background: none;
+      color: red;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    
   }
   p{
     font-weight: 600;

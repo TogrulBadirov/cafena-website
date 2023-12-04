@@ -69,17 +69,21 @@
         gap: 5px;
         margin: 15px 0 5px;
         .card_icon {
+         button{
           color: var(--dark-grey-color);
           border: 1px solid #e2dfdd;
           padding: 3px 7px;
           font-size: 1.3rem;
+          outline: none;
           border-radius: 5px;
+          background: none;
           cursor: pointer;
           &:hover {
             color: var(--main-color);
             border: 1px solid var(--main-color);
             transition: all 0.4s ease;
           }
+         }
         }
       }
     }
