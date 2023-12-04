@@ -94,8 +94,8 @@ const Navbar = () => {
                 <Dropdown links={firstDropdownItems} className="subMenu" />
               </li>
               <li className="nav_item">
-                <NavLink to={"/contact"} className="nav_link">
-                  contact
+                <NavLink to={"/reservation"} className="nav_link">
+                Reservation 
                 </NavLink>
               </li>
             </ul>

@@ -97,7 +97,6 @@ const Shop = () => {
       {/* <Outlet /> */}
       <main>
       <ProductDetailModal nav={'/shop'} />
-      <section id="breadcrumb"></section>
       <section id="shop-products">
         <div className="container">
           <div className="product-sort">

@@ -57,39 +57,6 @@ const MobileMenu = () => {
             </NavLink>
           </li>
 
-          {/* <li className="menu_item">
-            <div className="d-flex justify-content-between align-items-center">
-            <a className="nav_link">pages</a>
-            <button className="mobile_dropdown_button" onClick={handleDropdown}>
-              {
-                isDropdownOpen ?  <FaMinus /> : <FaPlus />
-              }
-            </button>
-            </div>
-            
-            <MobileMenuDropdown
-              links={secondDropdownItems}
-            />
-           
-          </li> */}
-          {/* <li className="menu_item ">
-            <div className="d-flex justify-content-between align-items-center">
-            <NavLink to={"/shop"} className="nav_link">
-              shop
-            </NavLink>
-            <button className="mobile_dropdown_button" onClick={handleDropdown} >
-              {
-                isDropdownOpen ?  <FaMinus /> : <FaPlus />
-              }
-            </button>
-            </div>
-            
-            <MobileMenuDropdown
-              links={firstDropdownItems}
-            />
-           
-          </li> */}
-
           <MobileMenuDropdown
             links={secondDropdownItems}
             dropdownTitle="pages"
@@ -99,8 +66,8 @@ const MobileMenu = () => {
           dropdownTitle="shop" />
 
           <li className="menu_item">
-            <NavLink to={"/contact"} className="nav_link">
-              contact
+            <NavLink to={"/reservation"} className="nav_link">
+            Reservation
             </NavLink>
           </li>
         </ul>
