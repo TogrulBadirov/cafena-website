@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import useFetch from "../../../hooks/UseFetch";
 import SectionHeading from "../../CommonComponents/SectionHeading";
 import SpecialMenuCards from "../SpecialMenuCards";
 import "./index.scss";
 const SpecialMenuSection = () => {
-  const { data }=useFetch('http://localhost:3000/category')
+  const { data:categoryData }=useFetch('http://localhost:3000/category')
+  const { data:productData }=useFetch('http://localhost:3000/products')
+  const [filteredData, setfilteredData] = useState(productData)
+  const [filterValue, setFilterValue] = useState("All")
+  // const handleFilter = ()=>{
+  //   setfilteredData(productData.filter(x=>x.categoryId.includes(filterValue)))
+  //   console.log(filteredData);
+  // }
+  useEffect(() => {
+    filterValue !== "All" ? setfilteredData(productData.filter(x=>x.categoryId.includes(parseInt(filterValue)))) : setfilteredData(productData)
+  }, [filterValue,productData])
+  
   return (
     <div id="special_menu">
       <div className="container">
@@ -15,16 +26,16 @@ const SpecialMenuSection = () => {
 
         <div className="special_menu_content">
             <div className="menu_buttons">
-              <button>all</button>
+              <button  onClick={()=>setFilterValue("All")}>all</button>
               {
-                data && data.map(item=>(
-                  <button>{item.categoryName}</button>
+                categoryData && categoryData.map(item=>(
+                  <button value={item.id} onClick={(e)=>setFilterValue(e.target.value)}>{item.categoryName}</button>
                 ))
               }
             </div>
 
             
-            <SpecialMenuCards/>
+            <SpecialMenuCards filteredProductData={filteredData}/>
         </div>
       </div>
     </div>
