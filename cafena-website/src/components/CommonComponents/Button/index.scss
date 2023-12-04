@@ -1,0 +1,61 @@
+.btn_hero {
+  padding: 10px 35px;
+  border: 1px solid var(--light-grey-color);
+  background-color: transparent;
+  border-radius: 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin: 20px 20px 0 0;
+  line-height: 29px;
+  &:hover {
+    &::after {
+      width: 100%;
+      transition-delay: left 300ms;
+      left: 0;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform-origin: right;
+    height: 100%;
+    width: 0;
+    background-color: var(--main-color);
+    transition: 0.3s ease-in-out;
+  }
+}
+.white {
+  background-color: #fff;
+  color: #000;
+  transition: 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  span {
+    position: relative;
+    z-index: 10;
+  }
+  &:hover {
+    color: #fff;
+  }
+}
+.dark {
+  background-color: var(--main-color);
+  color: #fff;
+  transition: 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  span {
+    position: relative;
+    z-index: 10;
+  }
+  &:hover {
+    color: #fff;
+  }
+  & > ::after {
+    background-color: #010103;
+  }
+}

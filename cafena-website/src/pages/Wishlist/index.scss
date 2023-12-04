@@ -1,9 +1,22 @@
 #wishlist {
     margin: 50px 0;
+   
     .shop_content {
       padding: 50px ;
       border: 1px solid #e2dfdd;
       border-radius: 10px;
+      .empty_wishlist{
+        font-size: 26px;
+        .go_to_shop{
+          border: none;
+          outline: none;
+          background: var(--main-color);
+          margin-left: 20px;
+          border-radius: 40px;
+          padding: 10px;
+          font-size: 18px;
+        }
+      }
       .product_property {
         .cart_product_info {
           border-bottom: 1px solid #e2dfdd;

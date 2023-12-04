@@ -306,3 +306,18 @@
     }
   }
 }
+
+@media screen and (max-width: 1199px) {
+  #footerSection {
+    position: relative;
+  
+    .midFooter {
+      .container {
+        .socialLinks {
+          padding: 75px 10px 0;
+        }
+      }
+    }
+    
+  }
+}

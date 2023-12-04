@@ -14,9 +14,15 @@
     }
    
     .remove_btn {
-      color: red;
-      font-size: 20px;
-      cursor: pointer;
+      button{
+        border: none;
+        outline: none;
+        background: none;
+        color: red;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      
     }
     .add_btn{
         border: none;
@@ -30,7 +36,7 @@
     }
     .stock_status{
         font-size: 14px;
-        color: green;
+        // color: green;
     }
     p{
       font-weight: 600;

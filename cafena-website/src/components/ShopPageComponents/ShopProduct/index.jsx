@@ -5,9 +5,11 @@ import { IoMdHeartEmpty } from "react-icons/io";
 import { BasketContext } from '../../../context/BasketContext';
 import { Link } from 'react-router-dom';
 import ShopProductDetailModal from '../ShopProductDetailModal';
+import { useWishListContext } from '../../../context/WishListContext';
 
 const ShopProduct = ({props,title,price,item}) => {
     const {basket, addToBasket, IsProductInBasket,discountedPrice} = useContext(BasketContext)
+    const {addToWishList}=useWishListContext()
     const {view} = props
   return (
     <>
@@ -36,7 +38,10 @@ const ShopProduct = ({props,title,price,item}) => {
            <button onClick={()=>addToBasket(item)}><FaShoppingBasket /></button>
          </div>
          <div className="card_icon">
-           <IoMdHeartEmpty />
+          <button onClick={()=>addToWishList(item)}>
+          <IoMdHeartEmpty />
+
+          </button>
          </div>
          <div className="card_icon">
              <Link to={`/shop/${item.id}`}> 
