@@ -1,8 +1,132 @@
-.ProductDetailModal{
-    position: fixed;
-    top: 0;
-    z-index: 9999;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba($color: #000000, $alpha: 0.4);
-}   
+.ProductDetailModal {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba($color: #000000, $alpha: 0.4);
+
+  .detail_modal {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    .modal_content {
+      .left_side {
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+        img {
+          object-fit: cover;
+        }
+      }
+
+      .rigth_side {
+        position: relative;
+        .close_btn{
+            position: absolute;
+            right: 0;
+            top: -10px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            outline: none;
+            width: 35px;
+            height: 35px;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        h4 {
+          font-size: 22px;
+          font-weight: 500;
+          text-transform: uppercase;
+          padding-bottom: 10px;
+        }
+        .product_desc {
+          color: #808080;
+          font-size: 16px;
+          padding: 5px 0;
+        }
+        .product_info {
+          font-size: 15px;
+          text-transform: uppercase;
+          color: #010103;
+          padding: 5px 0;
+          font-weight: 500;
+          span {
+            color: #a7a7a7;
+            font-size: 14px;
+          }
+        }
+        .detail_process {
+           
+            padding: 10px 0;
+          .detail_btn {
+            padding: 5px 10px;
+            border: 1px solid var(--light-grey-color);
+            background-color: transparent;
+            border-radius: 5px;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: 2px;
+            position: relative;
+            background-color: #fff;
+            color: #000;
+            transition: 0.3s ease-in-out;
+            overflow: hidden;
+            span {
+              position: relative;
+              z-index: 10;
+            }
+            &:hover {
+              color: #fff;
+            }
+            &:hover {
+              &::after {
+                width: 100%;
+                transition-delay: left 300ms;
+                left: 0;
+              }
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              top: 0;
+              right: 0;
+              transform-origin: right;
+              height: 100%;
+              width: 0;
+              background-color: var(--main-color);
+              transition: 0.3s ease-in-out;
+            }
+
+            
+             
+            
+          }
+
+          input{
+            width: 50px;
+            border: 1px solid var(--main-color);
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width:768px){
+    .detail_modal{
+        padding: 10px;
+        .modal_content{
+            .left_side{
+                padding: 20px 0;
+            }
+        }
+       
+    }
+  }
+}

@@ -6,6 +6,7 @@ import { FaTh, FaList } from "react-icons/fa";
 import Slider from "@mui/material/Slider";
 import ShopProductDetailModal from "../../components/ShopPageComponents/ShopProductDetailModal";
 import { Outlet } from 'react-router-dom'
+import ProductDetailModal from "../../components/HomePageComponents/ProductDetailModal";
 const minDistance = 10;
 
 const Shop = () => {
@@ -95,7 +96,7 @@ const Shop = () => {
 <>
       {/* <Outlet /> */}
       <main>
-      <ShopProductDetailModal nav={'/shop'} />
+      <ProductDetailModal nav={'/shop'} />
       <section id="breadcrumb"></section>
       <section id="shop-products">
         <div className="container">
