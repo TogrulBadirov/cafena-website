@@ -277,7 +277,10 @@
 #OurChef {
   padding-bottom: 115px;
   .container {
-    .title {
+    margin-top: 100px;
+    margin-bottom: 60px;
+    .title { 
+      
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -308,6 +311,7 @@
     .ourChefCards {
       display: flex;
       justify-content: center;
+     
       gap: 20px;
       .ourChefCard {
         border: 1px solid #e2dfdd;
